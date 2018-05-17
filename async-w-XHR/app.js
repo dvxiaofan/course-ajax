@@ -25,8 +25,10 @@
 
     });
 
+    // 添加图片
     function addImage() {
         let htmlContent = '';
+        // 获取JSON数据
         const data = JSON.parse(this.responseText);
 
         if (data && data.results && data.results[0]) {
@@ -38,6 +40,7 @@
         } else {
             htmlContent = `<div class="error-no-image">No Images To Show</div>`;
         }
+        // 填充HTML
         responseContainer.insertAdjacentHTML('afterbegin', htmlContent);
     }
 
